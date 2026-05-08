@@ -24,11 +24,16 @@ export function AuthProvider({ children }) {
       return;
     }
 
-    usersApi.getById(raw).then((user) => {
-      if (!mounted) return;
-      setCurrentUser(user ?? null);
-      setAuthReady(true);
-    });
+    usersApi.getById(raw)
+      .then((user) => {
+        if (!mounted) return;
+        setCurrentUser(user ?? null);
+        setAuthReady(true);
+      })
+      .catch(() => {
+        if (!mounted) return;
+        setAuthReady(true);
+      });
 
     return () => { mounted = false; };
   }, []);
