@@ -1,4 +1,4 @@
-# CampusFix — ICS 321 (KFUPM, Spring 252)
+# CampusFix 
 
 CampusFix is a database project for managing maintenance reports on campus. Think of it like a system where students or staff can report a broken AC, a leaking pipe, or a busted light — and the database keeps track of everything from the moment it's reported until someone fixes it.
 
