@@ -6,6 +6,7 @@ const NAV = [
   { to: '/',             label: 'Dashboard',  end: true },
   { to: '/reports',      label: 'All Reports', end: true },
   { to: '/reports/new',  label: 'New Report' }
+  { to: '/database',     label: 'Database',   end: true }
 ];
 
 export default function Sidebar() {
