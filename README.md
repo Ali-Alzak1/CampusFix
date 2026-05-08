@@ -82,4 +82,5 @@ npm install
 npm run dev
 ```
 
+
 The dashboard numbers match the verification queries exactly, so you can cross-check them against `03_verify_queries.sql` if you want to confirm everything lines up.
