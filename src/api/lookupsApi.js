@@ -1,16 +1,9 @@
-import { ok } from './client.js';
-import {
-  facility_types,
-  issue_categories,
-  priority_levels,
-  report_statuses,
-  maintenance_units
-} from './seedData.js';
+import { apiFetch } from './client.js';
 
 export const lookupsApi = {
-  getFacilityTypes:   () => ok(facility_types),
-  getCategories:      () => ok(issue_categories),
-  getPriorities:      () => ok(priority_levels),
-  getStatuses:        () => ok(report_statuses),
-  getMaintenanceUnits:() => ok(maintenance_units)
+  getFacilityTypes:    () => apiFetch('/lookups/facility-types'),
+  getCategories:       () => apiFetch('/lookups/categories'),
+  getPriorities:       () => apiFetch('/lookups/priorities'),
+  getStatuses:         () => apiFetch('/lookups/statuses'),
+  getMaintenanceUnits: () => apiFetch('/lookups/maintenance-units'),
 };
