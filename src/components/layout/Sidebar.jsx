@@ -5,8 +5,7 @@ import { useAuth } from '../../auth/AuthContext.jsx';
 const NAV = [
   { to: '/',             label: 'Dashboard',  end: true },
   { to: '/reports',      label: 'All Reports', end: true },
-  { to: '/reports/new',  label: 'New Report' },
-  { to: '/database',     label: 'Database',   end: true }
+  { to: '/reports/new',  label: 'New Report' }
 ];
 
 export default function Sidebar() {

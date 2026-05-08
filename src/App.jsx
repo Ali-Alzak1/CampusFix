@@ -8,7 +8,6 @@ import StaffPage from './pages/StaffPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import Spinner from './components/ui/Spinner.jsx';
 import { useAuth } from './auth/AuthContext.jsx';
-import DatabasePage from './pages/DatabasePage.jsx';
 
 
 export default function App() {
@@ -25,7 +24,6 @@ export default function App() {
         <Route path="reports/new" element={<NewReportPage />} />
         <Route path="reports/:id" element={<ReportDetailPage />} />
         <Route path="staff" element={isStaff ? <StaffPage /> : <Navigate to="/" replace />} />
-        <Route path="database" element={<DatabasePage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
