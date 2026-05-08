@@ -1,0 +1,84 @@
+/* =========================================================
+   CampusFix · Design Tokens
+   Brand palette (from project requirements):
+     #2FA084  primary (KFUPM-aligned teal)
+     #EEEEEE  surface neutral
+     #FFD93D  accent / highlight
+   Everything else is derived to keep the system cohesive.
+   ========================================================= */
+
+:root {
+  /* Brand */
+  --color-primary:        #2FA084;
+  --color-primary-dark:   #257B66;
+  --color-primary-soft:   #E6F4EF;
+  --color-accent:         #FFD93D;
+  --color-accent-soft:    #FFF6CC;
+
+  /* Neutrals (cool, paper-like) */
+  --color-surface:        #FAFAF7;   /* page background */
+  --color-surface-2:      #FFFFFF;   /* cards */
+  --color-surface-3:      #EEEEEE;   /* dividers / muted blocks */
+  --color-border:         #E2E2DD;
+  --color-border-strong:  #C9C9C2;
+
+  /* Text */
+  --color-text:           #1B2421;
+  --color-text-muted:     #5C6661;
+  --color-text-subtle:    #8A938E;
+  --color-text-on-primary:#FFFFFF;
+
+  /* Semantic (derived, used sparingly) */
+  --color-danger:         #C0392B;
+  --color-danger-soft:    #FBEAE8;
+  --color-warning:        #B7791F;
+  --color-warning-soft:   #FFF6CC;
+  --color-success:        #2FA084;
+  --color-info:           #3B6E8F;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:    'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --fs-xs:   12px;
+  --fs-sm:   13px;
+  --fs-base: 14px;
+  --fs-md:   15px;
+  --fs-lg:   18px;
+  --fs-xl:   22px;
+  --fs-2xl:  28px;
+  --fs-3xl:  36px;
+
+  --lh-tight:  1.2;
+  --lh-normal: 1.5;
+  --lh-loose:  1.7;
+
+  /* Spacing (4px scale) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  /* Radii & elevation */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(27, 36, 33, 0.04);
+  --shadow-md: 0 2px 8px rgba(27, 36, 33, 0.06);
+
+  /* Layout */
+  --sidebar-w: 240px;
+  --header-h:  64px;
+  --content-max: 1280px;
+
+  --transition: 160ms ease;
+}
