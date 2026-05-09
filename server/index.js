@@ -1,7 +1,6 @@
+import './loadEnv.js';
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
-dotenv.config();
 
 import reportsRouter    from './routes/reports.js';
 import analyticsRouter  from './routes/analytics.js';
@@ -22,6 +21,15 @@ app.use('/api/users',      usersRouter);
 app.get('/api/health', (_req, res) => res.json({ status: 'ok' }));
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`CampusFix API running on http://localhost:${PORT}`);
+});
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`\nPort ${PORT} is already in use.\nRun this to free it (Windows):\n  netstat -ano | findstr :${PORT}\n  taskkill /PID <PID> /F\n`);
+  } else {
+    console.error('Server error:', err.message);
+  }
+  process.exit(1);
 });
